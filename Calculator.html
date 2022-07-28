@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+  --shadow-color: 241deg 47% 26%;
+ 
+  --shadow-elevation-medium:
+    0px 0.2px 0.3px hsl(var(--shadow-color) / 0.14),
+    0px 0.6px 0.8px -0.4px hsl(var(--shadow-color) / 0.21),
+    0.1px 1.3px 1.7px -0.8px hsl(var(--shadow-color) / 0.28),
+    0.2px 3px 3.9px -1.2px hsl(var(--shadow-color) / 0.34);
+  
+
+}
+
+
+      main {
+        width: 100%;
+      }
+      h1 {
+        text-align: center;
+        width: 500px;
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+      }
+
+      #operaciones {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .op {
+        border: 1px solid grey;
+        margin: 10px;
+        text-align: center;
+        border-radius: 15px;
+        background-color: whitesmoke;
+        box-shadow: var(--shadow-elevation-medium);
+      }
+      .calculo1 {
+        align-self: center;
+        margin: auto;
+        margin-bottom: 5px;
+        display: block;
+      }
+      input {
+        padding: 5px;
+      }
+      .btnCalcular {
+        display: block;
+        margin: auto;
+        margin-top: 7px;
+        height: auto;
+        width: auto;
+        background-color: darkorange;
+        border: 1px solid gray;
+        padding: 10px 30px;
+      }
+      h2{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .resultados{
+            font-family: Arial, Helvetica, sans-serif;
+      }
+
+
+      /* desde aquí */
+
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>OPERACIONES MATEMÁTICAS</h1>
+
+      <div id="operaciones">
+
+        <!-- AQUÍ ESTÁ LA SUMA -->
+        <div id="suma" class="op">
+          <h2>Suma</h2>
+          <input
+            id="numero1suma"
+            class="calculo1"
+            placeholder="Ingrese el primer número"
+          />
+          <input
+            id="numero2suma"
+            class="calculo2"
+            placeholder="Ingrese el segundo número"
+          />
+          <button class="btnCalcular" id="sumaBtn" >Calcular</button>
+          <p id="resultadoSuma" class="resultados"></p>
+        </div>
+
+        <!-- AQUÍ ESTÁ LA RESTA -->
+        <div id="resta" class="op">
+          <h2>Resta</h2>
+          <input
+            id="numero1resta"
+            class="calculo1"
+            placeholder="Ingrese el primer número"
+          />
+          <input
+            id="numero2resta"
+            class="calculo2"
+            placeholder="Ingrese el segundo número"
+          />
+          <button class="btnCalcular" id="restaBtn">Calcular</button>
+          <p id="resultadoResta" class="resultados"></p>
+        </div>
+
+
+        <!-- AQUÍ ESTÁ LA MULTIPLICACIÓN -->
+        <div id="multiplicacion" class="op">
+          <h2>Multiplica</h2>
+          <input
+            id="numero1mul"
+            class="calculo1"
+            placeholder="Ingrese el primer número"
+          />
+          <input
+            id="numero2mul"
+            class="calculo2"
+            placeholder="Ingrese el segundo número"
+          />
+          <button class="btnCalcular" id="mulBtn">Calcular</button>
+          <p id="resultadoMultiplicacion" class="resultados"></p>
+
+
+        </div>
+      </div>
+    </main>
+    <script src="./calculator.js"></script>
+  </body>
+</html>
